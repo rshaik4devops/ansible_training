@@ -11,7 +11,16 @@
     tasks:
        - name: print key items
          debug:
-           var: user 
+           var: user
+       - name: print 1st key of a dictionary
+         debug:
+            var: user.user1
+       - name: print 2st key of a dictionary
+         debug:
+            var: user.user2
+       - name: print 3rd key of a dictionary
+         debug:
+            var: user.user3
      
      
        
