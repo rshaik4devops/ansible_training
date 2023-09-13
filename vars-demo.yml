@@ -11,7 +11,7 @@
     tasks:
        - name: print key items
          debug:
-          var: '{{ user }}' 
+           var: user 
      
      
        
