@@ -1,6 +1,6 @@
 ---
   - name : This is a demo on variables 
-    hosts: all
+    hosts: localhost
     become: yes
     vars:
       users:
@@ -9,9 +9,9 @@
         - ramesh 
 
     tasks:
-       - name : print a list variabel 
+       - name: print 1st user
          debug:
-           msg: users are "{{ users }}"
+           msg: the first user in list is "{{ users[0] }}"
 
 
          
