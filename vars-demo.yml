@@ -24,6 +24,9 @@
        - name: print keys
          debug:
             var: user.keys()
+       - name: print values
+         debug:
+            var: user.values()
      
      
        
