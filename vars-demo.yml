@@ -11,7 +11,7 @@
     tasks:
        - name : print a list variabel 
          debug:
-           var: "{{ users }}"
+           msg: users are "{{ users }}"
 
 
          
