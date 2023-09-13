@@ -14,7 +14,7 @@
            var: user
        - name: print 1st key of a dictionary
          debug:
-            var: user.user1
+            var: user['user1']
        - name: print 2st key of a dictionary
          debug:
             var: user.user2
