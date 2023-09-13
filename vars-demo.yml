@@ -21,6 +21,9 @@
        - name: print 3rd key of a dictionary
          debug:
             var: user.user3
+       - name: print keys
+         debug:
+            var: user.keys()
      
      
        
