@@ -3,24 +3,16 @@
     hosts: localhost
     become: yes
     vars:
-      fruits:
-        - ram
-        - krishna
-        - ramesh 
+      user:
+        user1: ram
+        user2: krishna
+        user3: mahesh
 
     tasks:
-       - name: print all list items
-         debug:
-           msg: the ites of array or list is {{ fruits }} 
-       - name: print 1st user
-         debug:
-           msg: the first user in list is {{ fruits[0] }}
-       - name: print second user
-         debug:
-            msg: the second user from the list is {{ fruits[1] }}
-       - name: print 3rd user 
-         debug:
-            msg: the third  user from the list is {{ fruits[2] }}
+       debug:
+          var: dictionary variables are {{ user }} 
+     
+     
        
 
 
