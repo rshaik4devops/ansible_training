@@ -9,7 +9,8 @@
         user3: mahesh
 
     tasks:
-       debug:
+       - name: print key items
+         debug:
           var: '{{ user }}' 
      
      
