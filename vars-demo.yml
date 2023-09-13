@@ -3,7 +3,7 @@
     hosts: localhost
     become: yes
     vars:
-      users:
+      fruits:
         - ram
         - krishna
         - ramesh 
@@ -11,10 +11,14 @@
     tasks:
        - name: print 1st user
          debug:
-           msg: the first user in list is "{{ users[0] }}"
+           msg: the first user in list is {{ fruits[0] }}
        - name: print second user
          debug:
-            msg: the second user from the list is {{ users[1] }}
+            msg: the second user from the list is {{ fruits[1] }}
+       - name: print 3rd user 
+         debug:
+            msg: the third  user from the list is {{ fruits[2] }}
+       
 
 
          
