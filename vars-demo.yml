@@ -9,6 +9,9 @@
         - ramesh 
 
     tasks:
+       - name: print all list items
+         debug:
+           msg: the ites of array or list is {{ fruits }} 
        - name: print 1st user
          debug:
            msg: the first user in list is {{ fruits[0] }}
