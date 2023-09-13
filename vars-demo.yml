@@ -12,6 +12,9 @@
        - name: print 1st user
          debug:
            msg: the first user in list is "{{ users[0] }}"
+       - name: print second user
+         debug:
+            msg: the second user from the list is {{ users[1] }}
 
 
          
