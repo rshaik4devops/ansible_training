@@ -10,7 +10,7 @@
 
     tasks:
        debug:
-          var: dictionary variables are {{ user }} 
+          msg: dictionary variables are {{ user }} 
      
      
        
