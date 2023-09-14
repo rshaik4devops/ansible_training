@@ -10,5 +10,9 @@
        - name: dispaly variable valvue
          debug:
            var:  output_command
-  
+       - name: start httpd if down
+         systemd:
+             name: httpd
+             state: started
+         when: output_command.rc !=0
        
