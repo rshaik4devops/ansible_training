@@ -15,6 +15,10 @@
        - name: print server info
          debug:
             msg: "server ip is: {{ server1.ip}}, port is: {{ server1.port }}, user is {{ server1.user }}"
+       - name: print serve rinfo in brases
+         debug:
+          msg: "server ip is: {{ server1[ 'ip']}}, port is: {{ server1 [ 'port' ] }}, user is {{ server1['user'] }}"
+
 
      
      
