@@ -12,6 +12,9 @@
        - name: print key items
          debug:
            msg: dictinary is {{ server1 }}
+       - name: print server info
+         debug:
+            msg: "server ip is: {{ server1.ip}}, port is: {{ server1.port }}, user is {{ server1.user }}"
 
      
      
