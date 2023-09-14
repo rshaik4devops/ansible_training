@@ -10,5 +10,5 @@
        - name: dispaly variable valvue
          debug:
            var:  output_command
-        - name: systemctl 
+    l 
        
