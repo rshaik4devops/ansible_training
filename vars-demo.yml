@@ -3,30 +3,16 @@
     hosts: localhost
     become: yes
     vars:
-      user:
-        user1: ram
-        user2: krishna
-        user3: mahesh
+      server1:
+        ip: 10.10.208.10
+        user: admin
+        port: 8080
 
     tasks:
        - name: print key items
          debug:
-           var: user
-       - name: print 1st key of a dictionary
-         debug:
-            var: user['user1']
-       - name: print 2st key of a dictionary
-         debug:
-            var: user.user2
-       - name: print 3rd key of a dictionary
-         debug:
-            var: user.user3
-       - name: print keys
-         debug:
-            var: user.keys()
-       - name: print values
-         debug:
-            var: user.values()
+           msg: dictinary is {{ server1 }}
+
      
      
        
