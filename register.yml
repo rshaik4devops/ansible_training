@@ -4,7 +4,7 @@
     become: yes
     tasks:
        - name: run a  comamnd
-         command: /usr/bin/cat
+         command: /usr/bin/cat /home/ansadmin/abc.txt
          register: output_command
          ignore_errors: true
        - name: dispaly variable valvue
