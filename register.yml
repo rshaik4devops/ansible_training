@@ -4,9 +4,10 @@
     become: yes
     tasks:
        - name: run a  comamnd
-         command: /usr/bin/cat /home/ansadmin/abc.txt
+         shell: ps -ef | grep java 
          register: output_command
          ignore_errors: true
        - name: dispaly variable valvue
          debug:
            var:  output_command
+       
