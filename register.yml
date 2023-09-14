@@ -4,7 +4,7 @@
     become: yes
     tasks:
        - name: run a  comamnd
-         command: /usr/bin/ansible
+         command: /usr/bin/cat
          register: output_command
          ignore_errors: true
        - name: dispaly variable valvue
