@@ -1,0 +1,11 @@
+--- 
+  - name: Demo on register
+    hosts: localhost
+    become: yes
+    tasks:
+       - name: run a  comamnd
+         command: /usr/bin/ansible
+         register: output_command
+       - name: dispaly variable valvue
+         debug:
+           var:  output_command
