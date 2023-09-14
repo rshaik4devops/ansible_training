@@ -6,6 +6,7 @@
        - name: run a  comamnd
          command: /usr/bin/ansible
          register: output_command
+         ignore_error: true
        - name: dispaly variable valvue
          debug:
            var:  output_command
