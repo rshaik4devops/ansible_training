@@ -5,14 +5,11 @@
     vars:
        package: nginx
     tasks:
-      - name: gather package details
-        package_facts:
-           manager: auto
+      - name: gather service details
+        service_facts:
       - name: install {{ package }} if not exist
-        yum:
-          name: "{{ package }}"
-          state: latest
-        when: "'{{ package }}' not in ansible_facts.packages"
+        debug:
+           var: ansibe_facts.services 
 
 
 
