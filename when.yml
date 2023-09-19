@@ -11,6 +11,6 @@
            path: "{{ path }}/ {{ file }}"
          register: file
        - name: print the vars 
-          debug:
-             var: file 
+         debug:
+            var: file 
        
