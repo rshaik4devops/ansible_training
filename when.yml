@@ -8,11 +8,13 @@
       - name: gather package details
         package_facts:
            manager: auto
-      - name: print package facts
-        debug:
-          var: ansible_facts.packages
+      - name: install {{ package }} if not exist
+        yum:
+          name: "{{ package }}"
+          state: latest
+        when: "'{{ package }}' not in ansible_facts.packages"
 
-          
+
 
 
       
