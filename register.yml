@@ -5,14 +5,15 @@
     tasks:
        - name: run a  comamnd
          shell: ps -ef | grep httpd | grep -v grep  
-         register: output_command
+         register: httpd_status
          ignore_errors: true
        - name: dispaly variable valvue
          debug:
-           var:  output_command
+           var:  httpd_status
+         register: debug_output
        - name: start httpd if down
          systemd:
              name: httpd
              state: started
-         when: output_command.rc !=0
+         when: httpd_status.rc !=0
        

@@ -1,0 +1,16 @@
+--- 
+  - name: this playbook is a demo on when conditionals
+    hosts: all
+    become: yes
+    vars:
+       file: test.txt
+       path: /opt/
+    tasks:
+       - name: check if a file exists
+         stat:
+           path: "{{ path }}/ {{ file }}"
+         register: file
+       - name: 
+          debug:
+             var: file 
+       
