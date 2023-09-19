@@ -10,7 +10,9 @@
          stat:
            path: "{{ path }}/{{ file }}"
          register: file
-       - name: print the vars 
-         debug:
-            var: file 
+       - name: creating  if {{ file }} is not exist 
+         file:
+            path: "{{ path }}/{{ file }}"
+            state: touch
+         when: not file.stat.exists 
        
