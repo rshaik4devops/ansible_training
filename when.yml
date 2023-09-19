@@ -10,7 +10,7 @@
          stat:
            path: "{{ path }}/ {{ file }}"
          register: file
-       - name: 
+       - name: print the vars 
           debug:
              var: file 
        
