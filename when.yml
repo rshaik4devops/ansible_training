@@ -9,7 +9,7 @@
         service_facts:
       - name: install {{ package }} if not exist
         debug:
-           var: ansible_facts.services['nginx'] 
+           msg: "nginx satus is {{ ansible_facts.services['nginx'] }}" 
 
 
 
