@@ -3,16 +3,17 @@
     hosts: all
     become: yes
     vars:
-       file: conf.cfg
-       path: /opt
+       package: nginx
     tasks:
-       - name: check if a file exists
-         stat:
-           path: "{{ path }}/{{ file }}"
-         register: file
-       - name: creating  if {{ file }} is not exist 
-         file:
-            path: "{{ path }}/{{ file }}"
-            state: touch
-         when: file.stat.exists == 'false' 
+      - name: gather package details
+        package_facts:
+           manager: auto
+      - name: print package facts
+        debug:
+          var: ansible_facts.packages
+
+          
+
+
+      
        
