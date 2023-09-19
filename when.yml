@@ -3,7 +3,7 @@
     hosts: all
     become: yes
     vars:
-       file: test.txt
+       file: abc.txt
        path: /opt
     tasks:
        - name: check if a file exists
