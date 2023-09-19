@@ -3,7 +3,7 @@
     hosts: all
     become: yes
     vars:
-       file: abc.txt
+       file: conf.cfg
        path: /opt
     tasks:
        - name: check if a file exists
@@ -14,5 +14,5 @@
          file:
             path: "{{ path }}/{{ file }}"
             state: touch
-         when: not file.stat.exists 
+         when: file.stat.exists == 'false' 
        
